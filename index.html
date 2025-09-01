@@ -2,34 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Photo Gallery</title>
+  <title>My Business Page</title>
   <style>
     body {
-      background: linear-gradient(to right, #ff9a9e, #fad0c4, #fad0c4);
+      background: linear-gradient(to right, #4facfe, #00f2fe);
       text-align: center;
       font-family: Arial, sans-serif;
+      color: black;
+      margin: 0;
+      padding: 0;
     }
-    h1 {
-      color: white;
+    header {
       background: black;
-      padding: 10px;
+      color: white;
+      padding: 15px;
     }
-    img {
-      width: 250px;
-      height: auto;
+    .contact {
+      margin: 20px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .contact h2 {
+      color: #333;
+    }
+    .contact p {
+      font-size: 18px;
+    }
+    .gallery img {
+      width: 200px;
+      height: 200px;
       margin: 10px;
       border-radius: 10px;
-      box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
-  <h1>🌟 My Gallery 🌟</h1>
-  <p>Here are some pictures:</p>
+  <header>
+    <h1>Welcome to My Business Page</h1>
+  </header>
 
-  <!-- Example images (replace these URLs with your own later) -->
-  <img src="https://picsum.photos/300/200?random=1" alt="Random Image">
-  <img src="https://picsum.photos/300/200?random=2" alt="Random Image">
-  <img src="https://picsum.photos/300/200?random=3" alt="Random Image">
+  <div class="gallery">
+    <h2>My Works</h2>
+    <img src="https://via.placeholder.com/200" alt="Product 1">
+    <img src="https://via.placeholder.com/200" alt="Product 2">
+    <img src="https://via.placeholder.com/200" alt="Product 3">
+  </div>
+
+  <div class="contact">
+    <h2>Contact & Payment</h2>
+    <p><strong>Momo Number:</strong> +233 24 850 3631</p>
+    <p><strong>WhatsApp:</strong> 0502956774</p>
+    <p><strong>Email:</strong> ghanacyber2@gmail.com</p>
+  </div>
 </body>
 </html>
