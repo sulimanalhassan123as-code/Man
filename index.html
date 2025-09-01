@@ -1,167 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Suliman Business Page</title>
-  <meta name="description" content="Ad promotions and fashion showcase. Book ads and contact via call, WhatsApp, email, or MoMo." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suliman Promotions & Fashion</title>
   <style>
-    :root{
-      --bg1:#f9d7d7; --bg2:#ffd1e1; --bg3:#f3e9ff;
-      --ink:#1c1d20; --muted:#6b7280; --brand:#111827; /* deep charcoal */
-      --accent:#ff2d55; /* lively accent */
-      --card:#ffffff; --ring:rgba(17,24,39,.12);
-      --radius:18px;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--ink);
-      background:
-        radial-gradient(1200px 600px at -10% -10%, var(--bg2), transparent 60%),
-        radial-gradient(900px 500px at 110% 0%, var(--bg3), transparent 60%),
-        linear-gradient(180deg, var(--bg1), #fff);
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-
-    /* Header */
-    header{
-      position:sticky; top:0; z-index:20;
-      backdrop-filter:saturate(1.2) blur(8px);
-      background:rgba(255,255,255,.7);
-      border-bottom:1px solid rgba(0,0,0,.06);
+    .logo {
+      font-size: 18px;
+      font-weight: bold;
     }
-    .wrap{max-width:1100px; margin:auto; padding:14px 18px}
-    .row{display:flex; align-items:center; justify-content:space-between; gap:12px}
-    .brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--brand)}
-    .logo{
-      width:40px; height:40px; border-radius:12px;
-      background: conic-gradient(from 210deg, #111827, #444cf7, #ff2d55, #111827);
-      box-shadow:0 6px 18px rgba(0,0,0,.15);
+    .nav-links {
+      display: flex;
+      gap: 15px;
     }
-    .brand h1{font-size:18px; margin:0; font-weight:700; letter-spacing:.3px}
-
-    nav a{
-      text-decoration:none; color:var(--ink); font-weight:600; font-size:14px;
-      padding:10px 12px; border-radius:12px;
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
     }
-    nav a:hover{background:rgba(0,0,0,.06)}
-
-    /* Hero */
-    .hero{padding:56px 18px 20px}
-    .hero .card{
-      background:var(--card); border-radius:var(--radius);
-      box-shadow:0 12px 40px var(--ring);
-      padding:28px; display:grid; grid-template-columns:1.2fr .8fr; gap:28px;
+    .menu-btn {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
     }
-    .hero h2{margin:0 0 10px; font-size:28px}
-    .hero p{margin:0 0 18px; color:var(--muted)}
-    .cta{display:flex; gap:10px; flex-wrap:wrap}
-    .btn{
-      border:0; border-radius:14px; padding:12px 16px; font-weight:700; cursor:pointer;
-      background:#111827; color:#fff; text-decoration:none; display:inline-flex; gap:8px; align-items:center;
-      box-shadow:0 8px 20px var(--ring);
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        padding: 10px;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .menu-btn {
+        display: block;
+      }
     }
-    .btn.secondary{background:#fff; color:#111827; border:1px solid rgba(0,0,0,.08)}
-    .btn:hover{transform:translateY(-1px)}
-    .phone-mock{
-      border-radius:26px; background:#000; overflow:hidden; min-height:230px;
-      background-image:url('https://images.unsplash.com/photo-1520975922224-e2aa23f5a67a?q=80&w=1200&auto=format&fit=crop');
-      background-size:cover; background-position:center;
-      box-shadow:0 20px 40px var(--ring);
-    }
-
-    /* Services grid */
-    section{padding:30px 18px}
-    .title{font-size:22px; margin:0 0 14px}
-    .muted{color:var(--muted)}
-    .grid{display:grid; gap:16px; grid-template-columns:repeat(3,1fr)}
-    .card{
-      background:var(--card); border-radius:var(--radius); padding:18px;
-      box-shadow:0 10px 28px var(--ring);
-    }
-    .card h3{margin:6px 0 6px; font-size:16px}
-    .price{font-weight:800}
-    .chip{display:inline-block; font-size:12px; padding:4px 10px; border-radius:999px; background:#f3f4f6; margin-left:8px}
-
-    /* Gallery */
-    .gallery{display:grid; gap:12px; grid-template-columns:repeat(3,1fr)}
-    .gallery img{width:100%; height:180px; object-fit:cover; border-radius:14px; box-shadow:0 10px 24px var(--ring)}
-
-    /* Contact action bar */
-    .action-bar{
-      position:sticky; bottom:14px; z-index:30;
-      display:flex; justify-content:center;
-      padding:0 18px;
-    }
-    .action-wrap{
-      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
-      background:rgba(255,255,255,.95); border:1px solid rgba(0,0,0,.06);
-      border-radius:999px; padding:10px 12px; box-shadow:0 12px 30px var(--ring);
-    }
-    .pill{border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:700; border:1px solid rgba(0,0,0,.08)}
-    .pill.primary{background:#111827; color:#fff; border:0}
-    .pill:hover{opacity:.95}
-
-    /* MoMo box */
-    .momo{
-      background:linear-gradient(145deg,#fff 0%, #fff8f9 100%); border:1px dashed rgba(0,0,0,.12);
-      border-radius:16px; padding:16px; margin-top:10px;
-    }
-    .momo strong{font-size:18px}
-    .row-btns{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
-
-    /* Footer */
-    footer{padding:30px 18px 60px; color:var(--muted); text-align:center}
-
-    /* Responsive */
-    @media (max-width: 900px){
-      .hero .card{grid-template-columns:1fr}
-      .grid{grid-template-columns:1fr 1fr}
-      .gallery{grid-template-columns:1fr 1fr}
-    }
-    @media (max-width: 580px){
-      .grid{grid-template-columns:1fr}
-      .gallery{grid-template-columns:1fr}
-      nav{display:none}
-      .hero h2{font-size:24px}
-    }
-
-    /* Simple icons */
-    svg{vertical-align:-3px}
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="wrap row">
-      <a class="brand" href="#top">
-        <div class="logo" aria-hidden="true"></div>
-        <h1>Suliman Promotions & Fashion</h1>
-      </a>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#pricing">Ad Pricing</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <nav>
+    <div class="logo">Suliman Promotions & Fashion</div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="pricing.html">Ad Pricing</a>
+      <a href="gallery.html">Gallery</a>
     </div>
-  </header>
+  </nav>
 
-  <!-- Hero -->
-  <div class="wrap hero" id="top">
-    <div class="card">
-      <div>
-        <h2>Promote Your Business & Showcase Style</h2>
-        <p class="muted">
-          I run paid adverts for local brands and share my fashion work.
-          Fast turnaround, fair pricing, and real results.
-        </p>
-        <div class="cta">
-          <a class="btn" href="tel:+233248503631" aria-label="Call now">
-            <!-- phone icon -->
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
