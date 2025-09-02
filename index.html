@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Website</title>
 
-  <!-- Font Awesome Icons -->
+  <!-- Font Awesome (for icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    /* Floating buttons */
+    /* Floating buttons container */
     .floating-buttons {
       position: fixed;
       bottom: 20px;
@@ -19,6 +19,7 @@
       gap: 12px;
       z-index: 2000;
     }
+
     .floating-buttons a {
       display: flex;
       align-items: center;
@@ -29,60 +30,40 @@
       color: white;
       font-size: 24px;
       text-decoration: none;
-      box-shadow: 0 0 15px rgba(255,255,255,0.6),
-                  0 0 25px rgba(255,255,255,0.4);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       animation: glowPulse 2s infinite alternate;
     }
+
     .floating-buttons a:hover {
       transform: scale(1.15);
     }
-    /* WhatsApp */
+
+    /* WhatsApp glow */
     .whatsapp-btn {
       background: #25d366;
       box-shadow: 0 0 15px #25d366, 0 0 30px #25d366;
     }
-    /* Email */
+
+    /* Email glow */
     .email-btn {
       background: #ff5733;
       box-shadow: 0 0 15px #ff5733, 0 0 30px #ff5733;
     }
-    /* Call */
+
+    /* Call glow */
     .call-btn {
       background: #007bff;
       box-shadow: 0 0 15px #007bff, 0 0 30px #007bff;
     }
-    /* Animation */
+
+    /* Neon pulsing animation */
     @keyframes glowPulse {
       from {
-        box-shadow: 0 0 8px rgba(255,255,255,0.4),
-                    0 0 16px rgba(255,255,255,0.3);
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 
+                    0 0 16px rgba(255, 255, 255, 0.2), 
+                    0 0 20px rgba(255, 255, 255, 0.1);
       }
       to {
-        box-shadow: 0 0 20px rgba(255,255,255,0.6),
-                    0 0 30px rgba(255,255,255,0.5);
-      }
-    }
-  </style>
-</head>
-<body>
-  <h1>Welcome to My Website</h1>
-  <p>This is my project hosted on GitHub Pages.</p>
-
-  <!-- Floating Buttons -->
-  <div class="floating-buttons">
-    <!-- WhatsApp -->
-    <a href="https://wa.me/233502956774" target="_blank" class="whatsapp-btn">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <!-- Email -->
-    <a href="mailto:ghanacyber2@gmail.com" class="email-btn">
-      <i class="fas fa-envelope"></i>
-    </a>
-    <!-- Call -->
-    <a href="tel:+233248503631" class="call-btn">
-      <i class="fas fa-phone"></i>
-    </a>
-  </div>
-</body>
-    </html>
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 
+                    0 0 25px rgba(255, 255, 255, 0.5), 
+                    0
