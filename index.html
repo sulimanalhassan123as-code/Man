@@ -1,265 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suliman Promotions & Fashion</title>
-  <style>
-    /* Body with smooth disco gradient background */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      min-height: 100vh;
-      background: linear-gradient(-45deg, #ff69b4, #ffb6c1, #ffe6f0, #ffffff);
-      background-size: 400% 400%;
-      animation: discoBackground 15s ease infinite;
-      scroll-behavior: smooth;
-    }
-    @keyframes discoBackground {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+/* Floating buttons */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 2000;
+}
+.floating-buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(255,255,255,0.6), 0 0 25px rgba(255,255,255,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: glowPulse 2s infinite alternate;
+}
+.floating-buttons a:hover {
+  transform: scale(1.15);
+}
 
-    /* Glowing rainbow text */
-    h1, h2, h3, nav .logo, nav ul li a {
-      background: linear-gradient(270deg, #ff0000, #ff9900, #33cc33, #3399ff, #cc33ff, #ff0099);
-      background-size: 1200% 1200%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: discoText 10s ease infinite;
-    }
-    @keyframes discoText {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+/* WhatsApp glow */
+.whatsapp-btn {
+  background: #25d366;
+  box-shadow: 0 0 15px #25d366, 0 0 30px #25d366;
+}
+/* Email glow */
+.email-btn {
+  background: #ff5733;
+  box-shadow: 0 0 15px #ff5733, 0 0 30px #ff5733;
+}
+/* Call glow */
+.call-btn {
+  background: #007bff;
+  box-shadow: 0 0 15px #007bff, 0 0 30px #007bff;
+}
 
-    /* Navbar sticky */
-    nav {
-      background: rgba(255, 255, 255, 0.3);
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-radius: 0 0 12px 12px;
-      backdrop-filter: blur(5px);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-    nav ul li {
-      margin: 0 10px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* Section styles */
-    section {
-      padding: 60px 20px;
-      margin: 20px;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 12px;
-      backdrop-filter: blur(8px);
-    }
-
-    .hero {
-      text-align: center;
-    }
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      color: #000;
-      font-weight: bold;
-    }
-    .hero a {
-      display: inline-block;
-      padding: 12px 24px;
-      background: #ff69b4;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-    .hero a:hover {
-      background: #ff1493;
-    }
-
-    /* Services */
-    .services ul {
-      max-width: 500px;
-      margin: 0 auto 20px;
-      padding: 0;
-      list-style: disc;
-      text-align: left;
-    }
-    .services ul li {
-      margin: 8px 0;
-      font-weight: bold;
-      color: #000;
-    }
-    .services a {
-      display: inline-block;
-      padding: 12px 20px;
-      background: #25d366;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-    .services a:hover {
-      background: #128c7e;
-    }
-
-    /* Gallery */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
-    }
-    .gallery-grid div {
-      background: rgba(255, 255, 255, 0.4);
-      border-radius: 8px;
-      height: 150px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #000;
-      font-weight: bold;
-    }
-
-    /* Contact */
-    .contact p {
-      font-size: 18px;
-      font-weight: bold;
-      color: #000;
-    }
-    .contact a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 20px;
-      background: #25d366;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-    .contact a:hover {
-      background: #128c7e;
-    }
-
-    /* Floating buttons (WhatsApp, Email, Call) */
-    .floating-buttons {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      z-index: 2000;
-    }
-    .floating-buttons a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      color: white;
-      font-size: 22px;
-      text-decoration: none;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-    .floating-buttons a:hover {
-      transform: scale(1.1);
-    }
-    .whatsapp-btn { background: #25d366; }
-    .whatsapp-btn:hover { background: #128c7e; }
-    .email-btn { background: #ff5733; }
-    .email-btn:hover { background: #cc4628; }
-    .call-btn { background: #007bff; }
-    .call-btn:hover { background: #0056b3; }
-  </style>
-</head>
-<body>
-
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">Suliman Promotions & Fashion</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero -->
-  <section class="hero" id="home">
-    <h1>Welcome to Suliman Promotions & Fashion</h1>
-    <p>Promote your business and showcase your unique style with us.</p>
-    <a href="#services">Explore Services</a>
-  </section>
-
-  <!-- About -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      At <b>Suliman Promotions & Fashion</b>, we believe every brand deserves the spotlight.  
-      We specialize in helping individuals and businesses grow by promoting their services and showcasing fashion with creativity and style.  
-      Our goal is to connect you with the right audience and help you shine.
-    </p>
-  </section>
-
-  <!-- Services -->
-  <section class="services" id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Paid adverts for local brands</li>
-      <li>Fashion showcase & promotion</li>
-      <li>Social media campaign management</li>
-      <li>Brand photography and design</li>
-    </ul>
-    <a href="https://wa.me/233502956774" target="_blank">Book a Service on WhatsApp</a>
-  </section>
-
-  <!-- Contact -->
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: ghanacyber2@gmail.com</p>
-    <p>Phone: +233 24 850 3631</p>
-    <a href="https://wa.me/233502956774" target="_blank">Chat on WhatsApp</a>
-  </section>
-
-  <!-- Gallery -->
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <div>Image 1</div>
-      <div>Image 2</div>
-      <div>Image 3</div>
-      <div>Image 4</div>
-      <div>Image 5</div>
-      <div>Image 6</div>
-    </div>
-  </section>
-
-  <!-- Floating Buttons -->
-  <div class="floating-buttons">
-    <a href="https://wa.me/233502956774" target="_blank" class="whatsapp-btn">💬</a>
-    <a href="mailto:ghanacyber2@gmail.com" class="email-btn">✉️</a>
-    <a href="tel:+233248503631" class="call-btn">📞</a>
-  </div>
-
-</body>
-</html>
+/* Neon pulsing animation */
+@keyframes glowPulse {
+  from {
+    box-shadow: 0 0 8px rgba(255,255,255,0.4), 0 0 16px rgba(255,255,255,0.2);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(255,255,255,0.
