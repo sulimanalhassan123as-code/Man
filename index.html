@@ -5,24 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Suliman Promotions & Fashion</title>
   <style>
+    /* Body with smooth disco gradient background */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #ffe6f0, #ffffff);
+      min-height: 100vh;
+      background: linear-gradient(-45deg, #ff69b4, #ffb6c1, #ffe6f0, #ffffff);
+      background-size: 400% 400%;
+      animation: discoBackground 15s ease infinite;
+      scroll-behavior: smooth;
+    }
+    @keyframes discoBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    /* Navbar */
+    /* Glowing rainbow text */
+    h1, h2, h3, nav .logo, nav ul li a {
+      background: linear-gradient(270deg, #ff0000, #ff9900, #33cc33, #3399ff, #cc33ff, #ff0099);
+      background-size: 1200% 1200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: discoText 10s ease infinite;
+    }
+    @keyframes discoText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Navbar sticky */
     nav {
-      background: linear-gradient(90deg, #ff69b4, #ffb6c1);
+      background: rgba(255, 255, 255, 0.3);
       padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-radius: 0 0 12px 12px;
-    }
-    nav .logo {
-      font-weight: bold;
-      font-size: 18px;
+      backdrop-filter: blur(5px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav ul {
       list-style: none;
@@ -35,32 +59,30 @@
     }
     nav ul li a {
       text-decoration: none;
-      color: black;
       font-weight: bold;
     }
-    nav ul li a:hover {
-      text-decoration: underline;
+
+    /* Section styles */
+    section {
+      padding: 60px 20px;
+      margin: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      backdrop-filter: blur(8px);
     }
 
-    /* Hero Section */
     .hero {
       text-align: center;
-      padding: 50px 20px;
-      background: linear-gradient(135deg, #ffb6c1, #ffe6f0);
-      border-radius: 12px;
-      margin: 20px;
-    }
-    .hero h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
     }
     .hero p {
-      font-size: 16px;
+      font-size: 18px;
       margin-bottom: 20px;
+      color: #000;
+      font-weight: bold;
     }
     .hero a {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 12px 24px;
       background: #ff69b4;
       color: white;
       text-decoration: none;
@@ -71,14 +93,7 @@
       background: #ff1493;
     }
 
-    /* Services Section */
-    .services {
-      padding: 40px 20px;
-    }
-    .services h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+    /* Services */
     .services ul {
       max-width: 500px;
       margin: 0 auto 20px;
@@ -88,10 +103,11 @@
     }
     .services ul li {
       margin: 8px 0;
+      font-weight: bold;
+      color: #000;
     }
     .services a {
-      display: block;
-      text-align: center;
+      display: inline-block;
       padding: 12px 20px;
       background: #25d366;
       color: white;
@@ -102,6 +118,76 @@
     .services a:hover {
       background: #128c7e;
     }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+    .gallery-grid div {
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 8px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* Contact */
+    .contact p {
+      font-size: 18px;
+      font-weight: bold;
+      color: #000;
+    }
+    .contact a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 20px;
+      background: #25d366;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .contact a:hover {
+      background: #128c7e;
+    }
+
+    /* Floating buttons (WhatsApp, Email, Call) */
+    .floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 2000;
+    }
+    .floating-buttons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      color: white;
+      font-size: 22px;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .floating-buttons a:hover {
+      transform: scale(1.1);
+    }
+    .whatsapp-btn { background: #25d366; }
+    .whatsapp-btn:hover { background: #128c7e; }
+    .email-btn { background: #ff5733; }
+    .email-btn:hover { background: #cc4628; }
+    .call-btn { background: #007bff; }
+    .call-btn:hover { background: #0056b3; }
   </style>
 </head>
 <body>
@@ -125,6 +211,16 @@
     <a href="#services">Explore Services</a>
   </section>
 
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      At <b>Suliman Promotions & Fashion</b>, we believe every brand deserves the spotlight.  
+      We specialize in helping individuals and businesses grow by promoting their services and showcasing fashion with creativity and style.  
+      Our goal is to connect you with the right audience and help you shine.
+    </p>
+  </section>
+
   <!-- Services -->
   <section class="services" id="services">
     <h2>Our Services</h2>
@@ -136,6 +232,34 @@
     </ul>
     <a href="https://wa.me/233502956774" target="_blank">Book a Service on WhatsApp</a>
   </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: ghanacyber2@gmail.com</p>
+    <p>Phone: +233 24 850 3631</p>
+    <a href="https://wa.me/233502956774" target="_blank">Chat on WhatsApp</a>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <div>Image 1</div>
+      <div>Image 2</div>
+      <div>Image 3</div>
+      <div>Image 4</div>
+      <div>Image 5</div>
+      <div>Image 6</div>
+    </div>
+  </section>
+
+  <!-- Floating Buttons -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/233502956774" target="_blank" class="whatsapp-btn">💬</a>
+    <a href="mailto:ghanacyber2@gmail.com" class="email-btn">✉️</a>
+    <a href="tel:+233248503631" class="call-btn">📞</a>
+  </div>
 
 </body>
 </html>
