@@ -1,82 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suliman Promotions & Fashion</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    nav {
-      background: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .logo {
-      font-size: 18px;
-      font-weight: bold;
-    }
-    .nav-links {
-      display: flex;
-      gap: 15px;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-    .menu-btn {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-      background: none;
-      border: none;
-    }
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background: #fff;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        padding: 10px;
-      }
-      .nav-links.show {
-        display: flex;
-      }
-      .menu-btn {
-        display: block;
-      }
-    }
-  </style>
-</head>
-<body>
+<nav class="navbar">
+  <div class="logo">Suliman Promotions & Fashion</div>
+  <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+</nav>
 
-  <nav>
-    <div class="logo">Suliman Promotions & Fashion</div>
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-      <a href="pricing.html">Ad Pricing</a>
-      <a href="gallery.html">Gallery</a>
-    </div>
-  </nav>
+<style>
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #ff6ec7, #ffc1e3);
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-radius: 10px;
+}
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("show");
-    }
-  </script>
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #222;
+}
 
-</body>
-</html>
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #fff;
+}
+
+/* Hamburger menu (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive design for phones */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    color: #222;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+</style>
+
+<script>
+document.querySelector(".menu-toggle").addEventListener("click", () => {
+  document.querySelector(".nav-links").classList.toggle("active");
+});
+</script>
