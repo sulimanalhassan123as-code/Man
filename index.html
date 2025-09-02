@@ -1,128 +1,141 @@
-<nav class="navbar">
-  <div class="logo">Suliman Promotions & Fashion</div>
-  <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-  </ul>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suliman Promotions & Fashion</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #ffffff);
+    }
 
-<style>
-/* Navbar styling */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(90deg, #ff6ec7, #ffc1e3);
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-radius: 10px;
-}
+    /* Navbar */
+    nav {
+      background: linear-gradient(90deg, #ff69b4, #ffb6c1);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 0 0 12px 12px;
+    }
+    nav .logo {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
 
-.logo {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #222;
-}
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #ffb6c1, #ffe6f0);
+      border-radius: 12px;
+      margin: 20px;
+    }
+    .hero h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .hero a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #ff69b4;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .hero a:hover {
+      background: #ff1493;
+    }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
+    /* Services Section */
+    .services {
+      padding: 40px 20px;
+    }
+    .services h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .services ul {
+      max-width: 500px;
+      margin: 0 auto 20px;
+      padding: 0;
+      list-style: disc;
+      text-align: left;
+    }
+    .services ul li {
+      margin: 8px 0;
+    }
+    .services a {
+      display: block;
+      text-align: center;
+      padding: 12px 20px;
+      background: #25d366;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .services a:hover {
+      background: #128c7e;
+    }
+  </style>
+</head>
+<body>
 
-.nav-links li a {
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
-  transition: color 0.3s;
-}
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Suliman Promotions & Fashion</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+  </nav>
 
-.nav-links li a:hover {
-  color: #fff;
-}
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <h1>Welcome to Suliman Promotions & Fashion</h1>
+    <p>Promote your business and showcase your unique style with us.</p>
+    <a href="#services">Explore Services</a>
+  </section>
 
-/* Hamburger menu (hidden on desktop) */
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
+  <!-- Services -->
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Paid adverts for local brands</li>
+      <li>Fashion showcase & promotion</li>
+      <li>Social media campaign management</li>
+      <li>Brand photography and design</li>
+    </ul>
+    <a href="https://wa.me/233502956774" target="_blank">Book a Service on WhatsApp</a>
+  </section>
 
-/* Responsive design for phones */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-    color: #222;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-}
-</style>
-
-<script>
-document.querySelector(".menu-toggle").addEventListener("click", () => {
-  document.querySelector(".nav-links").classList.toggle("active");
-});
-</script> <header class="hero">
-  <h1>Welcome to Suliman Promotions & Fashion</h1>
-  <p>Promote your business and showcase your unique style with us.</p>
-  <a href="services.html" class="btn">Explore Services</a>
-</header>
-
-<style>
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #ffc1e3, #ff6ec7);
-  color: #222;
-  border-radius: 12px;
-  margin: 20px;
-}
-
-.hero h1 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #222;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #ff6ec7;
-}
-</style>
+</body>
+</html>
