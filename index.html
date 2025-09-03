@@ -1,69 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
+<script>
+  let count = 0;
+  let target = 0;
 
-  <!-- Font Awesome (for icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  function setDefaultPlan() {
+    target = 100;                 // default SubhanAllah 33 + Alhamdulillah 33 + Allahu Akbar 34
+    showCounterArea();
+    update();
+  }
 
-  <style>
-    /* Floating buttons container */
-    .floating-buttons {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      z-index: 2000;
+  function setCustomPlan() {
+    const val = parseInt(document.getElementById('customTarget').value, 10);
+    if (Number.isFinite(val) && val > 0) {
+      target = val;
+      showCounterArea();
+      update();
+    } else {
+      alert('Please enter a valid number!');
     }
+  }
 
-    .floating-buttons a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      color: white;
-      font-size: 24px;
-      text-decoration: none;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: glowPulse 2s infinite alternate;
+  function showCounterArea() {
+    const setup = document.getElementById('setup');
+    const area  = document.getElementById('counter-area');
+    if (setup) setup.style.display = 'none';
+    if (area)  area.style.display  = 'block';
+  }
+
+  function increment() {
+    if (!target) {
+      alert('Please choose a plan first.');
+      return;
     }
-
-    .floating-buttons a:hover {
-      transform: scale(1.15);
+    if (count < target) {
+      count++;
+      update();
+      if (count === target) celebrate();
     }
+  }
 
-    /* WhatsApp glow */
-    .whatsapp-btn {
-      background: #25d366;
-      box-shadow: 0 0 15px #25d366, 0 0 30px #25d366;
+  function update() {
+    const counterEl  = document.getElementById('counter');
+    const progressEl = document.getElementById('progress');
+    if (counterEl)  counterEl.textContent = count;
+    if (progressEl) {
+      const percent = target ? (count / target) * 100 : 0;
+      progressEl.style.width = percent + '%';
     }
+  }
 
-    /* Email glow */
-    .email-btn {
-      background: #ff5733;
-      box-shadow: 0 0 15px #ff5733, 0 0 30px #ff5733;
-    }
+  function celebrate() {
+    const popup = document.getElementById('popup');
+    if (popup) popup.style.display = 'flex';
+    for (let i = 0; i < 25; i++) createBalloon();
+  }
 
-    /* Call glow */
-    .call-btn {
-      background: #007bff;
-      box-shadow: 0 0 15px #007bff, 0 0 30px #007bff;
-    }
+  function createBalloon() {
+    const b = document.createElement('div');
+    b.className = 'balloon';
+    b.style.left = Math.random() * 100 + 'vw';
+    b.style.backgroundColor = randomColor();
+    b.style.transform = `scale(${0.7 + Math.random() * 0.8})`;
+    b.style.animationDuration = (5 + Math.random() * 3) + 's';
+    document.body.appendChild(b);
+    setTimeout(() => b.remove(), 9000);
+  }
 
-    /* Neon pulsing animation */
-    @keyframes glowPulse {
-      from {
-        box-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 
-                    0 0 16px rgba(255, 255, 255, 0.2), 
-                    0 0 20px rgba(255, 255, 255, 0.1);
-      }
-      to {
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 
-                    0 0 25px rgba(255, 255, 255, 0.5), 
-                    0
+  function randomColor() {
+    const colors = ['#f44336','#e91e63','#9c27b0','#3f51b5','#2196f3','#009688','#4caf50','#ff9800','#795548'];
+    return colors[Math.floor(Math.random() * colors.length)];
+  }
+
+  function restart() {
+    count = 0;
+    update();
+    const popup = document.getElementById('popup');
+    if (popup) popup.style.display = 'none';
+  }
+
+  // initialize progress width on first load
+  document.addEventListener('DOMContentLoaded', update);
+</script>
