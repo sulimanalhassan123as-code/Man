@@ -101,10 +101,30 @@ body {
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   font-family: Arial, sans-serif;
-}
+<script>
+  function createStar() {
+    const star = document.createElement("div");
+    star.classList.add("star");
+    star.style.left = Math.random() * window.innerWidth + "px"; 
+    document.body.appendChild(star);
 
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+    // remove star after animation
+    setTimeout(() => {
+      star.remove();
+    }, 1000);
+  }
+
+  function starBurst() {
+    for (let i = 0; i < 8; i++) {
+      setTimeout(createStar, i * 100);
+    }
+  }
+
+  // Attach stars effect to buttons
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".btn-star");
+    buttons.forEach(btn => {
+      btn.addEventListener("click", starBurst);
+    });
+  });
+</script>
