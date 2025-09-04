@@ -1,63 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Suliman Promotions & Fashion</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — SULEIMAN ALHASSAN DIGITALL SOLUTION</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>Suliman Promotions & Fashion</h1>
+  <header class="header"><div class="container nav">
+    <div class="brand">SULEIMAN ALHASSAN <span>DIGITALL SOLUTION</span></div>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="contact.html" class="active">Contact</a>
       <a href="advertise.html">Advertise</a>
+      <a href="contact.html" class="btn btn-primary action-link sparkle-link">Get a Quote</a>
     </nav>
-  </header>
+  </div></header>
 
-  <!-- Main Drawer Layout -->
-  <main>
-    <div class="drawer">
-      <h2>Contact Us</h2>
-      <p>We would love to hear from you. Reach us via any of the options below:</p>
-
-      <ul class="contact-info">
-        <li><b>Email:</b> <a href="mailto:sulimanalhassan.123.as@gmail.com">sulimanalhassan.123.as@gmail.com</a></li>
-        <li><b>Phone:</b> <a href="tel:+233248503631">0248503631</a></li>
-        <li><b>WhatsApp:</b> <a href="https://wa.me/233502956774" target="_blank">0502956774</a></li>
-      </ul>
-
-      <form class="contact-form">
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Enter your name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter your email" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" placeholder="Type your message..." required></textarea>
-
-        <button type="submit" class="btn">Send Message</button>
+  <section class="section"><div class="container grid grid-2">
+    <div class="card">
+      <h1>Contact Us</h1>
+      <form class="form" onsubmit="handleContactSubmit(event)">
+        <input id="name" class="input" type="text" placeholder="Your name" required>
+        <input id="email" class="input" type="email" placeholder="Your email" required>
+        <textarea id="message" placeholder="Your message"></textarea>
+        <button class="btn btn-primary" type="submit">Send Email</button>
       </form>
+      <p class="small" style="margin-top:8px">Submitting opens your mail app with the message pre‑filled.</p>
     </div>
-  </main>
+    <div class="card">
+      <h2>Other Ways to Reach Us</h2>
+      <div class="actions">
+        <a class="btn btn-ghost action-link sparkle-link" href="tel:+233248503631">Call: 0248503631</a>
+        <a class="btn btn-ghost action-link sparkle-link" href="https://wa.me/233502756774">WhatsApp: 0502756774</a>
+        <a class="btn btn-ghost action-link sparkle-link" href="mailto:sulimanalhassan.123.as@gmail.com">Email: sulimanalhassan.123.as@gmail.com</a>
+      </div>
+    </div>
+  </div></section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 SULEIMAN ALHASSAN DIGITALL SOLUTION. All Rights Reserved.</p>
-  </footer>
-
-  <!-- Bottom Navigation -->
-  <div class="bottom-nav">
-    <a href="index.html">🏠 Home</a>
-    <a href="services.html">💼 Services</a>
-    <a href="advertise.html">📢 Advertise</a>
-    <a href="contact.html" class="active">📞 Contact</a>
-    <a href="about.html">ℹ️ About</a>
-  </div>
-</body>
-      </html>
+  <footer class="footer"><div class="container">© <span id="year"></span> SULEIMAN ALHASSAN DIGITALL SOLUTION</div></footer>
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body></html>
