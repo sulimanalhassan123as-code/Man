@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — SULEIMAN ALHASSAN DIGITALL SOLUTION</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header"><div class="container nav">
+    <div class="brand">SULEIMAN ALHASSAN <span>DIGITALL SOLUTION</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="advertise.html">Advertise</a>
+      <a href="contact.html" class="btn btn-primary action-link sparkle-link">Get a Quote</a>
+    </nav>
+  </div></header>
 
+  <section class="section"><div class="container grid grid-2">
+    <div class="card">
+      <h1>Contact Us</h1>
+      <form class="form" onsubmit="handleContactSubmit(event)">
+        <input id="name" class="input" type="text" placeholder="Your name" required>
+        <input id="email" class="input" type="email" placeholder="Your email" required>
+        <textarea id="message" placeholder="Your message"></textarea>
+        <button class="btn btn-primary" type="submit">Send Email</button>
+      </form>
+      <p class="small" style="margin-top:8px">Submitting opens your mail app with the message pre‑filled.</p>
+    </div>
+    <div class="card">
+      <h2>Other Ways to Reach Us</h2>
+      <div class="actions">
+        <a class="btn btn-ghost action-link sparkle-link" href="tel:+233248503631">Call: 0248503631</a>
+        <a class="btn btn-ghost action-link sparkle-link" href="https://wa.me/233502756774">WhatsApp: 0502756774</a>
+        <a class="btn btn-ghost action-link sparkle-link" href="mailto:sulimanalhassan.123.as@gmail.com">Email: sulimanalhassan.123.as@gmail.com</a>
+      </div>
+    </div>
+  </div></section>
+
+  <footer class="footer"><div class="container">© <span id="year"></span> SULEIMAN ALHASSAN DIGITALL SOLUTION</div></footer>
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body></html>
