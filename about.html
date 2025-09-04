@@ -1,74 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Suliman Promotions & Fashion</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — SULEIMAN ALHASSAN DIGITALL SOLUTION</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>Suliman Promotions & Fashion</h1>
+  <header class="header"><div class="container nav">
+    <div class="brand">SULEIMAN ALHASSAN <span>DIGITALL SOLUTION</span></div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
+      <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
       <a href="advertise.html">Advertise</a>
+      <a href="contact.html" class="btn btn-primary action-link sparkle-link">Get a Quote</a>
     </nav>
-  </header>
+  </div></header>
 
-  <!-- Main Drawer Layout -->
-  <main>
-    <div class="drawer">
-      <h2>About Us</h2>
-      <p>
-        At <strong>SULEIMAN ALHASSAN DIGITALL SOLUTION</strong>, our mission is to 
-        <em>empower businesses through innovative digital solutions</em>.  
-        We are passionate about creating modern, professional, and user-friendly 
-        platforms that help brands grow and succeed.
-      </p>
-
-      <p>
-        With expertise in <b>website design</b>, <b>digital marketing</b>, <b>SEO</b>, 
-        <b>content creation</b>, and <b>social media management</b>,  
-        we bring creativity and strategy together to deliver results that matter.
-      </p>
-
-      <p>
-        Our values are built on <b>trust, professionalism, and innovation</b>.  
-        Every project is a partnership, and we take pride in transforming your vision into reality.
-      </p>
-
-      <h3>Why Choose Us?</h3>
-      <ul>
-        <li>✅ Professional & modern website designs</li>
-        <li>✅ Tailored digital marketing strategies</li>
-        <li>✅ 100% responsive and SEO-optimized solutions</li>
-        <li>✅ Customer support that goes the extra mile</li>
-      </ul>
-
-      <p>
-        Let’s build something great together. 🚀  
-      </p>
-
-      <a href="contact.html" class="btn">Get in Touch</a>
+  <section class="section"><div class="container grid grid-2">
+    <div class="card">
+      <h1>About Us</h1>
+      <p>We are a Ghana‑based digital studio helping businesses grow with modern websites, strategic marketing and strong brand systems. Our approach is simple: listen carefully, design intentionally and deliver quickly.</p>
+      <p>From landing pages to full business sites, we build fast, accessible and SEO‑friendly experiences that convert visitors into customers.</p>
+      <p>Values we live by: integrity, clarity, craftsmanship and consistent improvement.</p>
+      <a href="contact.html" class="btn btn-primary action-link sparkle-link" style="margin-top:10px">Start Your Project</a>
     </div>
-  </main>
+    <div class="card">
+      <h2>Why Choose Us</h2>
+      <ul class="small" style="text-align:left; line-height:1.8">
+        <li>Modern, responsive design for all devices</li>
+        <li>SEO best practices and fast performance</li>
+        <li>Clear communication and on‑time delivery</li>
+        <li>Flexible packages for startups and SMEs</li>
+      </ul>
+    </div>
+  </div></section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 SULEIMAN ALHASSAN DIGITALL SOLUTION. All Rights Reserved.</p>
-  </footer>
-
-  <!-- Bottom Navigation -->
-  <div class="bottom-nav">
-    <a href="index.html">🏠 Home</a>
-    <a href="services.html">💼 Services</a>
-    <a href="advertise.html">📢 Advertise</a>
-    <a href="contact.html">📞 Contact</a>
-    <a href="about.html" class="active">ℹ️ About</a>
-  </div>
-</body>
-        </html>
+  <footer class="footer"><div class="container">© <span id="year"></span> SULEIMAN ALHASSAN DIGITALL SOLUTION</div></footer>
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body></html>
