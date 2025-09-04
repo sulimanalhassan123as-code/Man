@@ -1,56 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SULEIMAN ALHASSAN DIGITALL SOLUTION</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suleiman Alhassan Digital Solution</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <a class="logo" href="index.html">SULEIMAN ALHASSAN DIGITALL SOLUTION</a>
-
-    <!-- Hamburger for mobile -->
-    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
-
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="advertise.html">Advertise</a></li>
-      <!-- Mobile-only Quote button -->
-      <li class="mobile-only"><a class="quote-btn" href="contact.html">Get a Quote</a></li>
-    </ul>
-
-    <!-- Desktop-only Quote button -->
-    <a href="contact.html" class="quote-btn desktop-only">Get a Quote</a>
-  </nav>
-
-  <!-- Hero / Intro Section -->
-  <header class="hero">
-    <h1>Empowering Businesses Through Innovative Digital Solutions</h1>
-    <p>We specialize in website design, digital marketing, and brand development.</p>
-    <a href="contact.html" class="quote-btn">Get a Quote</a>
+  <!-- Header -->
+  <header>
+    <h1>SULEIMAN ALHASSAN DIGITALL SOLUTION</h1>
+    <nav>
+      <button id="menuBtn" class="menu-btn">☰</button>
+    </nav>
   </header>
 
-  <!-- Services Section -->
-  <section>
+  <!-- Drawer Menu -->
+  <div class="drawer" id="drawer">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="advertise.html">Advertise</a>
+    <a href="contact.html" class="cta">Get a Quote</a>
+  </div>
+
+  <!-- Overlay -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Empowering Businesses Through Innovative Digital Solutions</h2>
+    <p>We specialize in website design, digital marketing, and brand development.</p>
+    <a href="contact.html" class="btn">Get a Quote</a>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
     <h2>Our Services</h2>
     <ul>
       <li>🌐 Website Design</li>
-      <li>📊 Digital Marketing</li>
+      <li>📈 Digital Marketing</li>
       <li>🔍 SEO</li>
-      <li>✍️ Content Creation</li>
+      <li>✍ Content Creation</li>
       <li>📱 Social Media Management</li>
     </ul>
-  </section>
-
-  <!-- Work Section -->
-  <section>
-    <h2>Our Work</h2>
-    <p>Check out some of our recent projects that helped businesses grow.</p>
   </section>
 
   <!-- Footer -->
@@ -58,15 +51,6 @@
     <p>© 2025 SULEIMAN ALHASSAN DIGITALL SOLUTION. All Rights Reserved.</p>
   </footer>
 
-  <!-- Script for mobile menu -->
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
