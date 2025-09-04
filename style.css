@@ -1,15 +1,16 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    color: #fff;
-    background: linear-gradient(270deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
-    background-size: 800% 800%;
-    animation: gradientAnimation 20s ease infinite;
+.drawer {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 15px 10px;
 }
 
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.drawer h2 {
+  margin-top: 0;
+  color: #ff6600;
+}
+
+.drawer p {
+  color: #444;
 }
