@@ -1,1 +1,95 @@
 
+/* ===== Global / Reset ===== */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #0f172a; background: radial-gradient(1200px 800px at 10% -10%, #e0f2fe 0%, transparent 50%),
+                  radial-gradient(1200px 800px at 110% 10%, #e8f5e9 0%, transparent 50%),
+                  linear-gradient(120deg, #f8fafc, #f1f5f9);
+  display: flex; flex-direction: column;
+}
+:root{
+  --brand:#0ea5e9;       /* primary */
+  --brand-dark:#0284c7;
+  --accent:#22c55e;      /* accent */
+  --ink:#0f172a;         /* text */
+  --muted:#64748b;       /* secondary text */
+  --card:#ffffffcc;      /* glass card */
+  --ring: 0 10px 30px rgba(2,132,199,.25);
+}
+
+/* ===== Layout ===== */
+.container { width: min(1100px, 92%); margin: 0 auto; }
+.section { padding: 64px 0; }
+.card { background: var(--card); backdrop-filter: blur(10px); border-radius: 20px; box-shadow: 0 10px 30px rgba(15,23,42,.06); padding: 28px; }
+.grid { display: grid; gap: 22px; }
+
+/* ===== Header / Nav ===== */
+.header{ position: sticky; top:0; z-index: 40; backdrop-filter: blur(8px); background: #ffffffaa; border-bottom: 1px solid #e2e8f0; }
+.nav { display:flex; align-items:center; justify-content:space-between; height:64px; }
+.brand { font-weight: 800; letter-spacing:.3px; color: var(--ink); }
+.brand span { color: var(--brand-dark); }
+.nav a { color:#0f172a; text-decoration:none; margin:0 10px; font-weight:600; }
+.nav a:hover { color: var(--brand-dark); }
+
+/* ===== Hero ===== */
+.hero { position: relative; overflow: hidden; padding: 90px 0 64px; }
+.hero-bg {
+  position:absolute; inset:0; background:
+    radial-gradient(800px 500px at 10% 20%, rgba(2,132,199,.10), transparent 60%),
+    radial-gradient(800px 500px at 90% 10%, rgba(34,197,94,.10), transparent 60%),
+    linear-gradient(120deg, #ffffff, #f8fafc);
+}
+.hero .container { position:relative; z-index:1; }
+.kicker { color: var(--brand-dark); font-weight: 800; letter-spacing:.1em; text-transform:uppercase; }
+.h1 { font-size: clamp(28px, 6vw, 56px); line-height:1.1; margin: 8px 0 12px; }
+.lead { color: var(--muted); font-size: clamp(16px, 2.5vw, 20px); margin-bottom: 24px; }
+.cta-row { display:flex; gap:12px; flex-wrap:wrap }
+.btn { appearance:none; border:0; border-radius: 12px; padding: 12px 18px; font-weight: 800; cursor:pointer; }
+.btn-primary { background: linear-gradient(180deg, var(--brand), var(--brand-dark)); color: #fff; box-shadow: var(--ring); }
+.btn-ghost { background:#fff; color: var(--brand-dark); border:2px solid var(--brand); }
+.btn:hover { filter: brightness(.98); }
+
+/* ===== Services ===== */
+.icon { width: 38px; height: 38px; }
+.service { display:flex; gap:14px; align-items:flex-start; padding:16px; border:1px solid #e5e7eb; border-radius:16px; background:#fff; }
+.service h3 { margin: 2px 0 4px; }
+.service p { color: var(--muted); margin:0; }
+
+/* ===== Portfolio ===== */
+.project { border-radius:16px; overflow:hidden; background:#fff; border:1px solid #e5e7eb; }
+.project img { display:block; width:100%; height:180px; object-fit:cover; }
+.project .p-body { padding:14px; }
+
+/* ===== Testimonials ===== */
+.testi { background:#fff; border:1px solid #e5e7eb; border-radius:16px; padding:18px; }
+.testi .who { font-weight:700; margin-top:6px; color:#111827; }
+.testi p { color: var(--muted); }
+
+/* ===== Footer ===== */
+.footer { background:#0b1220; color:#cbd5e1; padding: 28px 0; margin-top:auto; }
+.footer a { color:#93c5fd; text-decoration:none }
+.footer a:hover{ text-decoration:underline }
+.small { font-size: 13px; color:#94a3b8 }
+
+/* ===== Contact & Forms ===== */
+.form { display:grid; gap:14px; }
+.input, textarea { width:100%; background:#fff; border:1.5px solid #e5e7eb; border-radius:10px; padding:12px 14px; font-size:16px; }
+textarea { min-height:120px; }
+.actions { display:flex; gap:10px; flex-wrap:wrap }
+.action-link { text-decoration:none; }
+
+/* ===== Stars / Sparkles (click effect) ===== */
+.sparkle { position: fixed; pointer-events:none; width:8px; height:8px; background: radial-gradient(circle, #fff, rgba(255,255,255,.2)); border-radius:50%; box-shadow: 0 0 14px 6px rgba(255,255,255,.6); animation: pop .8s ease-out forwards; z-index:50 }
+@keyframes pop {
+  0% { transform: scale(.2) translateY(0); opacity: 1 }
+  70%{ transform: scale(1) translateY(-20px); opacity: .9 }
+  100%{ transform: scale(0) translateY(-40px); opacity: 0 }
+}
+
+/* ===== Responsive grids ===== */
+@media(min-width: 720px){
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+}
