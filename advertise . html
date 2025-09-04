@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Advertise With Us — SULEIMAN ALHASSAN DIGITALL SOLUTION</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advertise With Us - Suleiman Alhassan Digital Solution</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header"><div class="container nav">
-    <div class="brand">SULEIMAN ALHASSAN <span>DIGITALL SOLUTION</span></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="advertise.html">Advertise</a>
-      <a href="contact.html" class="btn btn-primary action-link sparkle-link">Get a Quote</a>
-    </nav>
-  </div></header>
-
-  <section class="section"><div class="container">
-    <h1>Advertise With Us</h1>
-    <div class="card">
-      <p>We offer targeted advertising solutions including banner placements, sponsored content and social media promotions. Reach engaged audiences with clear analytics and flexible packages.</p>
-      <ul class="small" style="text-align:left; line-height:1.9">
-        <li>Homepage banner (top & middle positions)</li>
-        <li>Sponsored blog/article features</li>
-        <li>Social media shoutouts and reels</li>
-        <li>Monthly or performance‑based plans</li>
-      </ul>
-      <div class="actions" style="margin-top:8px">
-        <a class="btn btn-primary action-link sparkle-link" href="mailto:sulimanalhassan.123.as@gmail.com?subject=Advertising%20Inquiry">Get Advertising Rates</a>
-        <a class="btn btn-ghost action-link sparkle-link" href="https://wa.me/233502956774">WhatsApp Us</a>
-      </div>
+  <header>
+    <div class="container nav">
+      <h1>SULEIMAN ALHASSAN DIGITALL SOLUTION</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="advertise.html" class="active">Advertise</a>
+        <a href="contact.html">Get a Quote</a>
+      </nav>
     </div>
-  </div></section>
+  </header>
 
-  <footer class="footer"><div class="container">© <span id="year"></span> SULEIMAN ALHASSAN DIGITALL SOLUTION</div></footer>
-  <script src="script.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</body></html>
+  <section class="hero">
+    <div class="container">
+      <h2>Advertise With Us</h2>
+      <p>Promote your business with us through banner ads, sponsored content, or social media promotions. 
+      We provide opportunities to reach a wide and engaged audience effectively.</p>
+      <a href="mailto:sulimanalhassan.123.as@gmail.com" class="btn">Email Us</a>
+      <a href="tel:+233248503631" class="btn">Call Us</a>
+      <a href="https://wa.me/233502956774" target="_blank" class="btn">Chat on WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SULEIMAN ALHASSAN DIGITALL SOLUTION. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
