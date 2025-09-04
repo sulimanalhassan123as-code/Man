@@ -1,102 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SULEIMAN ALHASSAN DIGITALL SOLUTION</title>
-  <meta name="description" content="EMPOWERING BUSINESS THROUGH INNOVATION DIGITAL SOLUION. Website design, digital marketing, SEO and more." />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="container nav">
-      <div class="brand">SULEIMAN ALHASSAN <span>DIGITALL SOLUTION</span></div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="advertise.html">Advertise</a>
-        <a href="contact.html" class="btn btn-primary action-link sparkle-link" style="margin-left:8px">Get a Quote</a>
-      </nav>
-    </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a class="logo" href="index.html">SULEIMAN ALHASSAN DIGITALL SOLUTION</a>
+
+    <!-- Hamburger for mobile -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="advertise.html">Advertise</a></li>
+      <!-- Mobile-only Quote button -->
+      <li class="mobile-only"><a class="quote-btn" href="contact.html">Get a Quote</a></li>
+    </ul>
+
+    <!-- Desktop-only Quote button -->
+    <a href="contact.html" class="quote-btn desktop-only">Get a Quote</a>
+  </nav>
+
+  <!-- Hero / Intro Section -->
+  <header class="hero">
+    <h1>Empowering Businesses Through Innovative Digital Solutions</h1>
+    <p>We specialize in website design, digital marketing, and brand development.</p>
+    <a href="contact.html" class="quote-btn">Get a Quote</a>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="container">
-      <div class="kicker">Digital Agency</div>
-      <h1 class="h1">EMPOWERING BUSINESS THROUGH INNOVATION DIGITAL SOLUION.</h1>
-      <p class="lead">We specialize in website design, digital marketing, SEO, content creation and social media management.</p>
-      <div class="cta-row">
-        <a href="contact.html" class="btn btn-primary action-link sparkle-link">Get a Quote</a>
-        <a href="about.html" class="btn btn-ghost action-link sparkle-link">Learn More</a>
-      </div>
-    </div>
+  <!-- Services Section -->
+  <section>
+    <h2>Our Services</h2>
+    <ul>
+      <li>🌐 Website Design</li>
+      <li>📊 Digital Marketing</li>
+      <li>🔍 SEO</li>
+      <li>✍️ Content Creation</li>
+      <li>📱 Social Media Management</li>
+    </ul>
   </section>
 
-  <!-- Services -->
-  <section class="section">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="grid grid-3" style="margin-top:14px">
-        <div class="service">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-          <div><h3>Website Design</h3><p>High‑performance, responsive websites with modern UI/UX.</p></div>
-        </div>
-        <div class="service">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l7-7 7 7-7 7-7-7z"/></svg>
-          <div><h3>Digital Marketing</h3><p>Campaigns that convert across search, social and email.</p></div>
-        </div>
-        <div class="service">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l-7-7 7-7 7 7-7 7z"/></svg>
-          <div><h3>SEO</h3><p>Technical SEO and content strategy to boost your rankings.</p></div>
-        </div>
-        <div class="service">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
-          <div><h3>Content Creation</h3><p>Engaging copy, visuals and videos tailored to your brand.</p></div>
-        </div>
-        <div class="service">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H4z"/><path d="M2 20h20"/></svg>
-          <div><h3>Social Media</h3><p>Grow your audience and increase engagement with strategy.</p></div>
-        </div>
-        <div class="service">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
-          <div><h3>Brand Development</h3><p>Identity systems that communicate trust and value.</p></div>
-        </div>
-      </div>
-    </div>
+  <!-- Work Section -->
+  <section>
+    <h2>Our Work</h2>
+    <p>Check out some of our recent projects that helped businesses grow.</p>
   </section>
 
-  <!-- Portfolio (placeholders) -->
-  <section class="section">
-    <div class="container">
-      <h2>Recent Projects</h2>
-      <div class="grid grid-3" style="margin-top:14px">
-        <div class="project"><img src="https://picsum.photos/seed/sa1/600/380" alt="Project 1"/><div class="p-body"><strong>Modern Corporate Site</strong><p class="small">Clean, fast and SEO‑ready.</p></div></div>
-        <div class="project"><img src="https://picsum.photos/seed/sa2/600/380" alt="Project 2"/><div class="p-body"><strong>E‑commerce Landing</strong><p class="small">Conversion‑focused design.</p></div></div>
-        <div class="project"><img src="https://picsum.photos/seed/sa3/600/380" alt="Project 3"/><div class="p-body"><strong>Startup Launch</strong><p class="small">Brand + website + growth.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials (placeholder) -->
-  <section class="section">
-    <div class="container grid grid-3">
-      <div class="testi"><p>“Professional, fast and high quality work. Highly recommended.”</p><div class="who">— Client Name</div></div>
-      <div class="testi"><p>“They transformed our online presence and boosted leads.”</p><div class="who">— Client Name</div></div>
-      <div class="testi"><p>“Creative ideas and clear communication throughout the project.”</p><div class="who">— Client Name</div></div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div>© <span id="year"></span> SULEIMAN ALHASSAN DIGITALL SOLUTION • All rights reserved</div>
-      <div class="small"> <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></div>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SULEIMAN ALHASSAN DIGITALL SOLUTION. All Rights Reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <!-- Script for mobile menu -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
 </body>
-  </html>
+</html>
