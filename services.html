@@ -104,33 +104,3 @@
   background: none;
   border: 0;
   cursor: pointer;
-}
-
-/* ===== Mobile (drawer) ===== */
-@media (max-width: 768px) {
-  .logo { max-width: 65%; }
-
-  .menu-toggle { display: block; }
-
-  .desktop-only { display: none; }    /* hide big Quote button on mobile */
-  .mobile-only { display: block; }    /* show small Quote button inside drawer */
-
-  .nav-links {
-    /* hidden by default */
-    display: none;
-    position: absolute;
-    top: 60px;          /* just under the navbar */
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background: #ffffff;
-    padding: 10px 0;
-    box-shadow: 0 10px 18px rgba(0,0,0,0.12);
-  }
-
-  .nav-links.active { display: flex; }
-
-  .nav-links li { padding: 6px 18px; }
-
-  .nav-links li a { font-size: 16px; }
-}
